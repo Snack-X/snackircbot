@@ -42,7 +42,6 @@ function onMessage(e) {
 
   if(cmd === "-list") {
     var channels = Client.chans.join(", ");
-    console.log(Client.chans);
 
     Client.send(to, "Current channels - " + channels);
   }
