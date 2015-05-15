@@ -4,5 +4,6 @@
   "nickserv": "/modules/nickserv.js",
   "csat": "/modules/csat.js",
   "donate": "/modules/donate.js",
-  "ping": "/modules/ping.js"
+  "ping": "/modules/ping.js",
+  "cast": "/modules/cast.js"
 }

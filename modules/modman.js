@@ -18,7 +18,6 @@ function onMessage(e) {
    *  MODMAN commands
    *    `-modman list`           list available modules
    *    `-modman reload`         reload list of modules
-   *    `-modman info <name>`    read information of module <name>
    *
    *    `-module list`           list loaded modules
    *    `-module load <name>`    load module <name>
@@ -38,7 +37,7 @@ function onMessage(e) {
 
   if(cmd === "-modman") {
     if(typeof subcmd === "undefined") {
-      Client.send(to, "Error:MODMAN - Try `-modman list|reload|info`");
+      Client.send(to, "Error:MODMAN - Try `-modman list|reload`");
     }
     else if(subcmd === "list") {
       var list = Object.keys(Bot.getModuleList());
@@ -54,16 +53,6 @@ function onMessage(e) {
       catch(e) {
         Client.send(to, e.message);
       }
-    }
-    else if(subcmd === "info") {
-      if(typeof arg === "undefined") {
-        Client.send(to, "Error:MODMAN - Try `-modman info <name>`");
-      }
-      else if(typeof Bot.getModuleList()[arg] === "undefined") {
-        Client.send(to, "Error:MODMAN - Module does not exist");
-      }
-      else
-        Client.send(to, Bot.getModuleList()[arg].information);
     }
   }
   else if(cmd === "-module") {
