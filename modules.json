@@ -1,0 +1,8 @@
+{
+  "modman": "/modules/modman.js",
+  "chanman": "/modules/chanman.js",
+  "nickserv": "/modules/nickserv.js",
+  "csat": "/modules/csat.js",
+  "donate": "/modules/donate.js",
+  "ping": "/modules/ping.js"
+}

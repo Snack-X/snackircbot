@@ -1,0 +1,13 @@
+{
+  "name": "snackircbot",
+  "version": "1.0.0",
+  "description": "Snack IRC Bot",
+  "main": "index.js",
+  "author": "Jaemin Noh <korsnack@korsnack.kr>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "node-twitter-api": "^1.5.0",
+    "slate-irc": "^0.8.1"
+  }
+}

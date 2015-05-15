@@ -1,0 +1,11 @@
+{
+  "irc": {
+    "host": "",
+    "port": 6667
+  },
+  "bot": {
+    "nick": "",
+    "userName": "",
+    "realName": ""
+  }
+}
