@@ -33,9 +33,8 @@ function onMessage(e) {
    */
 
   // commands are available to specific host
-  var AVAILABLE_HOST = "irc.korsnack.kr";
-  if(host !== AVAILABLE_HOST) return;
-
+  if(Config.hosts.indexOf(host) === -1) return;
+  
   var arr = text.split(" ");
 
   var cmd = arr[0];
