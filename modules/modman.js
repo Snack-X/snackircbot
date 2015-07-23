@@ -8,6 +8,8 @@ var information = {
 
 var Client, Bot;
 
+var Config = require(path.join(__dirname, "/modman.json"));
+
 function onMessage(e) {
   var nick = e.from;
   var to = e.to;
@@ -26,8 +28,7 @@ function onMessage(e) {
    */
 
   // commands are available to specific host
-  var AVAILABLE_HOST = "irc.korsnack.kr";
-  if(host !== AVAILABLE_HOST) return;
+  if(Config.hosts.indexOf(host) === -1) return;
 
   var arr = text.split(" ");
 
