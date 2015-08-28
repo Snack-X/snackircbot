@@ -33,6 +33,15 @@ function onMessage(e) {
     var result = JSON.parse(body);
     var information = result.icestats.source.title;
 
+    if(!information) {
+      for(var i in result.icestats.source) {
+        var source = result.icestats.source[i];
+
+        if(source.server_url === "http://mu.snack.so/imas.mp3")
+          information = source.title;
+      }
+    }
+
     Client.send(to, "♬ " + information);
   });
 }
